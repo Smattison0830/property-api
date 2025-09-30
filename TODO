@@ -1,0 +1,14 @@
+TODO:
+
+0. Create initial commit using rails new w/ --api and postgresql database
+1. Create database
+2. Create initial migration for Properties
+    0. A Property has a UID, property_name, address, room_number, rent, size, type_of_property
+3. Create import CSV function (Import only a few for testing)
+4.
+5. Create API route for Properties???
+6. Create tests for the Property Controller???
+    0.
+
+* Will add more as I make progress *
+
