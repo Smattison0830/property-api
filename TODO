@@ -4,6 +4,15 @@ TODO:
 1. Create database
 2. Create initial migration for Properties
     0. A Property has a UID, property_name, address, room_number, rent, size, type_of_property
+
+UID = char
+property_name = string
+address = string
+room_number = string
+rent = number
+size = number
+type_of_property = enum?????
+
 3. Create import CSV function (Import only a few for testing)
 4.
 5. Create API route for Properties???
