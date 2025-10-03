@@ -20,12 +20,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_02_070635) do
 
   create_table "properties", force: :cascade do |t|
     t.integer "unique_id", null: false
-    t.string "property_name"
+    t.string "property_name", null: false
     t.string "address"
     t.string "room_number"
     t.integer "rent"
     t.float "size"
-    t.enum "type_of_property", null: false, enum_type: "type_of_property"
+    t.enum "type_of_property", enum_type: "type_of_property"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

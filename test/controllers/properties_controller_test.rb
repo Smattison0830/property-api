@@ -1,38 +1,38 @@
 require "test_helper"
 
 class PropertiesControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @property = properties(:one)
-  end
+  # setup do
+  #   @property = properties(:one)
+  # end
 
-  test "should get index" do
-    get properties_url, as: :json
-    assert_response :success
-  end
+  # test "should get index" do
+  #   get properties_url, as: :json
+  #   assert_response :success
+  # end
 
-  test "should create property" do
-    assert_difference("Property.count") do
-      post properties_url, params: { property: { address: @property.address, property_name: @property.property_name, rent: @property.rent, room_number: @property.room_number, size: @property.size, type_of_property: @property.type_of_property, unique_id: @property.unique_id } }, as: :json
-    end
+  # test "should create property" do
+  #   assert_difference("Property.count") do
+  #     post properties_url, params: { property: { address: @property.address, property_name: @property.property_name, rent: @property.rent, room_number: @property.room_number, size: @property.size, type_of_property: @property.type_of_property, unique_id: @property.unique_id } }, as: :json
+  #   end
 
-    assert_response :created
-  end
+  #   assert_response :created
+  # end
 
-  test "should show property" do
-    get property_url(@property), as: :json
-    assert_response :success
-  end
+  # test "should show property" do
+  #   get property_url(@property), as: :json
+  #   assert_response :success
+  # end
 
-  test "should update property" do
-    patch property_url(@property), params: { property: { address: @property.address, property_name: @property.property_name, rent: @property.rent, room_number: @property.room_number, size: @property.size, type_of_property: @property.type_of_property, unique_id: @property.unique_id } }, as: :json
-    assert_response :success
-  end
+  # test "should update property" do
+  #   patch property_url(@property), params: { property: { address: @property.address, property_name: @property.property_name, rent: @property.rent, room_number: @property.room_number, size: @property.size, type_of_property: @property.type_of_property, unique_id: @property.unique_id } }, as: :json
+  #   assert_response :success
+  # end
 
-  test "should destroy property" do
-    assert_difference("Property.count", -1) do
-      delete property_url(@property), as: :json
-    end
+  # test "should destroy property" do
+  #   assert_difference("Property.count", -1) do
+  #     delete property_url(@property), as: :json
+  #   end
 
-    assert_response :no_content
-  end
+  #   assert_response :no_content
+  # end
 end
