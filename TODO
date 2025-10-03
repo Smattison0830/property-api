@@ -11,13 +11,14 @@ address = string
 room_number = string
 rent = number
 size = number
-type_of_property = enum?????
+type_of_property = enum
 
-3. Create import CSV function (Import only a few for testing)
-4.
-5. Create API route for Properties???
-6. Create tests for the Property Controller???
-    0.
+3. Create Property validations
+4. Create tests for the Property Controller　TDD
+
+5. Create import CSV function (Import only a few for testing???)
+6.
+7. Create API route for Properties???
 
 * Will add more as I make progress *
 
