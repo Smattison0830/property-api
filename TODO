@@ -15,6 +15,7 @@ type_of_property = enum
 
 3. Create Property validations
 4. Create tests for the Property Controller　TDD
+    0. Create tests for validations created in Property.rb model
 
 5. Create import CSV function (Import only a few for testing???)
 6.
