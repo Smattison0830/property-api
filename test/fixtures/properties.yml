@@ -5,15 +5,15 @@ one:
   property_name: MyString
   address: MyString
   room_number: MyString
-  rent: 1
-  size: 1.5
-  type_of_property: 
+  rent: 155000
+  size: 80.5
+  type_of_property: 2
 
 two:
   unique_id: 1
   property_name: MyString
   address: MyString
   room_number: MyString
-  rent: 1
-  size: 1.5
-  type_of_property: 
+  rent: 710000
+  size: 42.7
+  type_of_property: 1
