@@ -13,14 +13,9 @@ class PropertiesControllerTest < ActionDispatch::IntegrationTest
     assert_response :created
   end
 
-  test "should not create property without unique id" do
-    assert_no_difference("Property.count") do
-      post properties_url, params: property_payload(unique_id: nil), as: :json
-    end
-
-    assert_response :unprocessable_content
-    body = response.parsed_body
-    assert body.key?("unique_id"), "expected validation error on unique_id, got: #{body.inspect}"
+  test "new property has unique id" do
+    property = Property.new
+    assert property.unique_id.present?, "expected Property.new to set unique_id"
   end
 
   test "should not create property without property name" do

@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  unique_id: 1
+  unique_id: "11111111-1111-1111-1111-111111111111"
   property_name: MyString
   address: MyString
   room_number: MyString
@@ -10,7 +10,7 @@ one:
   type_of_property: 2
 
 two:
-  unique_id: 1
+  unique_id: "22222222-2222-2222-2222-222222222222"
   property_name: MyString
   address: MyString
   room_number: MyString

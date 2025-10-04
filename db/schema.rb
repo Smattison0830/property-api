@@ -13,9 +13,10 @@
 ActiveRecord::Schema[8.0].define(version: 2025_10_02_070635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+  enable_extension "pgcrypto"
 
   create_table "properties", force: :cascade do |t|
-    t.integer "unique_id", null: false
+    t.uuid "unique_id", default: -> { "gen_random_uuid()" }, null: false
     t.string "property_name", null: false
     t.string "address"
     t.string "room_number"
