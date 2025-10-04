@@ -14,10 +14,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_02_070635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
-  # Custom types defined in this database.
-  # Note that some types may not work with other database engines. Be careful if changing database.
-  create_enum "type_of_property", ["アパート", "一戸建て", "マンション"]
-
   create_table "properties", force: :cascade do |t|
     t.integer "unique_id", null: false
     t.string "property_name", null: false
@@ -25,7 +21,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_02_070635) do
     t.string "room_number"
     t.integer "rent"
     t.float "size"
-    t.enum "type_of_property", enum_type: "type_of_property"
+    t.integer "type_of_property"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
