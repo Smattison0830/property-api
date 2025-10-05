@@ -7,7 +7,8 @@ class PropertiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create property" do
     assert_difference("Property.count") do
-      post properties_url, params: property_payload, as: :json
+      # Have to change params to different unique_id than 1 maybe because multiple properties already exist??
+      post properties_url, params: property_payload(unique_id: 99), as: :json
     end
 
     assert_response :created
@@ -15,7 +16,6 @@ class PropertiesControllerTest < ActionDispatch::IntegrationTest
 
   test "new property has id" do
     property = Property.new
-    p property
     assert property.id.present?, "expected Property.new to set id"
   end
 

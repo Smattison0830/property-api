@@ -16,9 +16,4 @@ class Property < ApplicationRecord
     def ensure_id
         self.id ||= SecureRandom.uuid
     end
-
-    # Create logic to check if id is same???
-    # Currently only raises an error
-    # Error message is: PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "properties_pkey" (ActiveRecord::RecordNotUnique)
-
 end
