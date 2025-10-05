@@ -8,11 +8,6 @@ class ImportPropertyCsv
   def call
     rows = CSV.read(@file_path, headers: true, encoding: "UTF-8")
 
-    # TODO
-    # Update call to first check in unique Id exists in database
-    # If ID exists then update row with data from csv
-    # else create new property in database(logic below)
-
     # Only take the first 10 rows
     rows.first(10).each do |row|
       property_data = {
@@ -25,7 +20,15 @@ class ImportPropertyCsv
         type_of_property: row["建物の種類"]
       }
 
-      Property.create!(property_data)
+      # def find_or_initialize_by(attributes, &block)
+      #      find_by(attributes) || new(attributes, &block)
+      # end
+
+      # find_or_initialize_by does a search by attributes or creates a new object with attributes
+      property = Property.find_or_initialize_by(unique_id: property_data[:unique_id])
+      property.assign_attributes(property_data)
+      property.save!
     end
+    Rails.logger.info("Import Property CSV has finished importing / updating from #{@file_path}")
   end
 end
