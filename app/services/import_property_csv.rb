@@ -16,7 +16,7 @@ class ImportPropertyCsv
         address:          row["住所"],
         room_number:      row["部屋番号"],
         rent:             row["賃料"],
-        size:             row["広さ"],
+        size:       q      row["広さ"],
         type_of_property: row["建物の種類"]
       }
 
@@ -26,7 +26,9 @@ class ImportPropertyCsv
 
       # find_or_initialize_by does a search by attributes or creates a new object with attributes
       property = Property.find_or_initialize_by(unique_id: property_data[:unique_id])
+      # Adds data from csv to object
       property.assign_attributes(property_data)
+      # Saves object and raises error if not valid
       property.save!
     end
     Rails.logger.info("Import Property CSV has finished importing / updating from #{@file_path}")
