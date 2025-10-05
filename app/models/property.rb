@@ -7,7 +7,7 @@ class Property < ApplicationRecord
 
     after_initialize :ensure_id
 
-    validates :unique_id, presence: true
+    validates :unique_id, presence: true, uniqueness: true
     validates :property_name, presence: true
     # When house exists(一戸建て), room_number can be NULL
     validates :room_number, presence: true, unless: :detached_house?
