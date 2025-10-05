@@ -18,7 +18,9 @@ type_of_property = enum
     0. Create tests for validations created in Property.rb model
 
 5. Create import CSV function (Import only a few for testing???)
-6.
+    0. Create general logic and test
+    1. Create logic that will check is unique_id is same.
+       if unique_id is same, update info in DB, else create new Property
 7. Create API route for Properties???
 
 * Will add more as I make progress *

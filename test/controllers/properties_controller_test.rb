@@ -13,10 +13,13 @@ class PropertiesControllerTest < ActionDispatch::IntegrationTest
     assert_response :created
   end
 
-  test "new property has unique id" do
+  test "new property has id" do
     property = Property.new
-    assert property.unique_id.present?, "expected Property.new to set unique_id"
+    p property
+    assert property.id.present?, "expected Property.new to set id"
   end
+
+  # TODO: Create test that replaces unique_id on save if unique_id already exists in db
 
   test "should not create property without property name" do
     assert_no_difference("Property.count") do
