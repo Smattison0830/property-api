@@ -14,13 +14,31 @@ Database created with:
 rails db:create db:migrate
 <!-- Might add seeds??? -->
 
-<!-- * Database initialization -->
+Import Properties from a csv using the service described below.
+
+* Services (job queues, cache servers, search engines, etc.)
+To use the import property csv function, add the csv to db/test_data and name the file test_data.csv.
+Run the below in console.
+
+rails import:properties
 
 * How to run the test suite
-Will be using rspec???
+rake
 
-<!-- * Services (job queues, cache servers, search engines, etc.)
+* Opening a pull request
+Before opening a pull request make sure the below pass testing:
+0. Run 'rake' and make sure all the tests are green.
+1. Run rubocop and make sure all the new files are following the rubocop lint.
 
-* Deployment instructions
+* Documentation used to build:
 
-* ... -->
+guides.rubyonrails.org/ - Used as a reference for all things ActiveRecord(Migrations, Validations, Callbacks, others).
+api.rubyonrails.org/ - For information about RoR methods
+Google - For coding conventions and help with best practices in RoR
+Chatgpt - Same as above
+
+
+
+
+
+

@@ -22,6 +22,7 @@ type_of_property = enum
     1. Create logic that will check is unique_id is same.
        if unique_id is same, update info in DB, else create new Property
 7. Create API route for Properties???
+8. Update README and TODO
 
-* Will add more as I make progress *
-
+9. Create tests for the import_properties_csv ??? *How??*
+10. Refactor tests for Properties controller.
