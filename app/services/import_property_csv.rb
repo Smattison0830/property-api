@@ -16,10 +16,9 @@ class ImportPropertyCsv
         address:          row["住所"],
         room_number:      row["部屋番号"],
         rent:             row["賃料"],
-        size:       q      row["広さ"],
+        size:             row["広さ"],
         type_of_property: row["建物の種類"]
       }
-
       # def find_or_initialize_by(attributes, &block)
       #      find_by(attributes) || new(attributes, &block)
       # end
