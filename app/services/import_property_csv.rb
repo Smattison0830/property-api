@@ -8,8 +8,8 @@ class ImportPropertyCsv
   def call
     rows = CSV.read(@file_path, headers: true, encoding: "UTF-8")
 
-    # Only take the first 10 rows
-    rows.first(10).each do |row|
+    # Only take the first 100 rows
+    rows.first(100).each do |row|
       property_data = {
         unique_id:        row["ユニークID"],
         property_name:    row["物件名"],
