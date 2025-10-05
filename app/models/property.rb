@@ -1,8 +1,8 @@
 class Property < ApplicationRecord
     enum :type_of_property, {
-        mansion: 0,
-        apartment: 1,
-        detached_house: 2
+        mansion: "マンション",
+        apartment: "アパート",
+        detached_house: "一戸建て"
     }
 
     after_initialize :ensure_unique_id

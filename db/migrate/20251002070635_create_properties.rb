@@ -9,10 +9,9 @@ class CreateProperties < ActiveRecord::Migration[8.0]
       t.string :room_number
       t.integer :rent
       t.float :size
-      t.integer :type_of_property
+      t.string :type_of_property
 
       t.timestamps
     end
   end
 end
-

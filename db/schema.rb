@@ -22,7 +22,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_02_070635) do
     t.string "room_number"
     t.integer "rent"
     t.float "size"
-    t.integer "type_of_property"
+    t.string "type_of_property"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
